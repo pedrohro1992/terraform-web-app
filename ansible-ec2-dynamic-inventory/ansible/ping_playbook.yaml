@@ -1,0 +1,6 @@
+- name: Ping Dynamic Inventory
+  hosts: ubuntu
+
+  tasks:
+    - name: ping dynamic inventory
+      ping:
