@@ -1,0 +1,15 @@
+plugin: aws_ec2
+aws_profile: default
+regions:
+  - us-east-1
+
+hostnames:
+  - ip-address
+# Make groups separeted by availability_zone, keys are returned on 'ansible_inventory' utility
+# keyed_groups:
+#   - prefix: az
+#     key: placement.availability_zone
+
+groups:
+  amazon-linux: "'amazon-linux' in tags.OS"
+  ubuntu: "'ubuntu' in tags.OS"
